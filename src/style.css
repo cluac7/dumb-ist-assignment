@@ -1,10 +1,14 @@
+::selection {
+  background: rgb(83, 82, 82);
+}
+
 body {
   height: 100vh;
   margin: 0;
   cursor: none;
   background: black;
-  font-family: sans-serif;
-  font-size: 4em;
+  font-family: 'JetBrains Mono', 'Helvetica', monospace;
+  font-size: 1em;
   color: white;
 }
 
@@ -37,4 +41,35 @@ a#hoverlink:hover {
 
 circle {
   fill: white;
+}
+
+
+nav {
+  display: flex;
+  gap: 2em;
+  flex-direction: row;
+  height: 50px;
+  width: 100vw;
+  background: rgb(23, 34, 39);
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+}
+
+.navitem {
+  align-items: center;
+  justify-content: center;
+}
+
+@media (pointer:none), (pointer:coarse) {
+  .cursor {
+    display: none;
+  }
 }
