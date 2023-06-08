@@ -18,3 +18,7 @@ function onMouseHover() {
 function onMouseHoverOut() {
   gsap.to($cursor, { duration: 0.4, scale: 1 });
 }
+
+
+var mainSplitText = new SplitText(".maintext", {type:"words"});
+gsap.staggerFrom(mainSplitText.words, 0.5, {opacity:0, rotation:-180, y:-100, ease:Back.easeOut}, 0.02)
