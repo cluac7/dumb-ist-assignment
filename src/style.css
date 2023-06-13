@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -132,7 +133,7 @@ header a:hover {
 .contactButton:link, .contactButton:visited {
   background-color: white;
   color: black;
-  border: 2px solid #b2dfdb;
+  border: 2px solid white;
   border-radius: 10px;
   padding: 10px 20px;
   text-align: center;
@@ -143,4 +144,18 @@ header a:hover {
 .contactButton:hover, .contactButton:active {
   background-color: #b2dfdb;
   color: black;
+  border: 2px solid #b2dfdb;
+}
+
+.imagetrack {
+  display: flex;
+  gap: 0.5em;
+  flex-direction: row;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.imagetrack > img {
+  width: 600px;
+  height: 300px;
 }
