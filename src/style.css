@@ -128,3 +128,19 @@ header a:hover {
 .maintext.three {
   grid-area: txt3;
 }
+
+.contactButton:link, .contactButton:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid #b2dfdb;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contactButton:hover, .contactButton:active {
+  background-color: #b2dfdb;
+  color: black;
+}
