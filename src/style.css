@@ -18,6 +18,15 @@ body {
   color: white;
 }
 
+.funnybgcontainer {
+  height: 100%;
+  background-image: url("imgs/Slumk.jpg");
+  background-repeat: no-repeat ;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.8;
+}
+
 section#hoverable {
   display: flex;
   width: 100%;
@@ -72,6 +81,17 @@ header li {
   list-style: none;
   display: inline-block;
   padding: 0 20px;
+}
+
+header li#topbarlinks {
+  transform: translateY(-50%);
+}
+
+header li.activeButton {
+  background-color: #212121;
+  border-radius: 20px;
+  border-color: #212121;
+  border: 40px 15px;
 }
 
 header {
@@ -145,17 +165,4 @@ header a:hover {
   background-color: #b2dfdb;
   color: black;
   border: 2px solid #b2dfdb;
-}
-
-.imagetrack {
-  display: flex;
-  gap: 0.5em;
-  flex-direction: row;
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
-.imagetrack > img {
-  width: 600px;
-  height: 300px;
 }
