@@ -1,6 +1,7 @@
 const $cursor = document.querySelector(".cursorcircle");
 const $hoverlink = document.querySelectorAll("a");
 
+
 document.body.addEventListener("mousemove", onMouseMove);
 
 for (let i = 0; i < $hoverlink.length; i++) {
@@ -20,5 +21,33 @@ function onMouseHoverOut() {
 }
 
 
-var mainSplitText = new SplitText(".maintext", {type:"words"});
-gsap.staggerFrom(mainSplitText.words, 0.5, {opacity:0, rotation:-180, y:-100, ease:Back.easeOut}, 0.02)
+
+
+// cool scroll down text appear animation
+
+gsap.registerPlugin(ScrollTrigger);
+
+const $bgcontainer = document.querySelector(".funnybgcontainer"); 
+const $textcontainer = document.querySelector(".bgtextcontainer"); 
+
+gsap.to($bgcontainer, {
+  scrollTrigger: {
+    trigger: "header.infraheader",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+    markers: true,
+  },
+  opacity: 0.4,
+})
+
+gsap.to($textcontainer, {
+  scrollTrigger: {
+    trigger: "header.infraheader",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+    markers: true,
+  },
+  opacity: 1,
+})

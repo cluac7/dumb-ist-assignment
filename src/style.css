@@ -13,7 +13,7 @@ body {
   margin: 0;
   cursor: none;
   background: black;
-  font-family: 'JetBrains Mono', 'Helvetica', monospace;
+  font-family: "JetBrains Mono", "Helvetica", monospace;
   font-size: 1em;
   color: white;
 }
@@ -21,9 +21,9 @@ body {
 .funnybgcontainer {
   height: 100%;
   background-image: url("imgs/Slumk.jpg");
-  background-repeat: no-repeat ;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   opacity: 0.8;
 }
 
@@ -58,7 +58,6 @@ circle {
   fill: white;
 }
 
-
 a {
   text-decoration: none;
   color: white;
@@ -70,12 +69,11 @@ a {
   justify-content: center;
 }
 
-@media (pointer:none), (pointer:coarse) {
+@media (pointer: none), (pointer: coarse) {
   .cursor {
     display: none;
   }
 }
-
 
 header li {
   list-style: none;
@@ -107,7 +105,6 @@ header {
   font-size: 1.5em;
 }
 
-
 header a {
   text-decoration: none;
   color: rgb(203, 200, 200);
@@ -123,10 +120,10 @@ header a:hover {
   width: 100%;
   height: 90%;
   margin-top: auto;
-  grid-template-areas: 
-  "txt1 txt1 txt1 . ."
-  ". txt2 txt2 txt2 ."
-  ". . txt3 txt3 txt3";
+  grid-template-areas:
+    "txt1 txt1 txt1 . ."
+    ". txt2 txt2 txt2 ."
+    ". . txt3 txt3 txt3";
   grid-template-columns: repeat(1fr, 5);
   grid-template-rows: repeat(1fr, 3);
 }
@@ -150,7 +147,8 @@ header a:hover {
   grid-area: txt3;
 }
 
-.contactButton:link, .contactButton:visited {
+.contactButton:link,
+.contactButton:visited {
   background-color: white;
   color: black;
   border: 2px solid white;
@@ -161,8 +159,25 @@ header a:hover {
   display: inline-block;
 }
 
-.contactButton:hover, .contactButton:active {
+.contactButton:hover,
+.contactButton:active {
   background-color: #b2dfdb;
   color: black;
   border: 2px solid #b2dfdb;
+}
+
+.bgtextcontainer {
+  width: 40%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 150px 0px;
+  opacity: 0;
+  text-align: center;
+}
+
+.bgtextcontainer p {
+  background-color: white;
+  color: black;
 }
