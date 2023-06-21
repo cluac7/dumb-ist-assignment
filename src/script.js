@@ -30,11 +30,17 @@ const $bgcontainer = document.querySelector(".funnybgcontainer");
 const $textcontainer = document.querySelector(".bgtextcontainer"); 
 
 gsap.to($bgcontainer, {
-  opacity: 0.4,
-  delay: 2
+  opacity: 0.2,
+  delay: 1.5
 })
 
 gsap.to($textcontainer, {
   opacity: 1,
-  delay: 2
+  delay: 1.5
 })
+
+
+//INNOVATION STUFF
+
+gsap.to("#backgroundVid", {opacity: 0.2, delay: 5})
+gsap.to(".innovationInfo", {opacity: 1, delay: 5})

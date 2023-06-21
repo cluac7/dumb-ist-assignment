@@ -89,6 +89,7 @@ header {
   align-items: center;
   padding: 20px 50px;
   box-shadow: 0 1px 8px rgb(26, 56, 95);
+  position: sticky;
 }
 
 #title {
@@ -171,7 +172,7 @@ header a:hover {
 }
 
 .bgtextcontainer {
-  position: absolute;
+  /* position: absolute;
   top: 10%;
   left: 50%;
 
@@ -184,10 +185,57 @@ header a:hover {
 
   padding-top: 150px;
   opacity: 0;
+  text-align: center; */
+  width: 60%;
+  height: 89%;
+  object-fit: cover;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0;
+  top: 140px;
+  bottom: 20%;
   text-align: center;
+  opacity: 0;
 }
 
-.bgtextcontainer p {
+.bgtextcontainer {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.bgtextcontainer::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+/* .bgtextcontainer p {
   background-color: white;
   color: black;
+} */
+
+
+
+#backgroundVid {
+  width: 100vw;
+  height: 89%;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 11%;
+  bottom: 0;
+  z-index: -1;
+}
+
+.innovationInfo {
+  width: 40%;
+  height: 89%;
+  object-fit: cover;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0;
+  top: 20%;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
 }
