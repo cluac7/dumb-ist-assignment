@@ -1,10 +1,20 @@
+::selection {
+  background: rgb(83, 82, 82);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
   height: 100vh;
   margin: 0;
   cursor: none;
   background: black;
-  font-family: sans-serif;
-  font-size: 4em;
+  font-family: "JetBrains Mono", "Helvetica", monospace;
+  font-size: 1em;
   color: white;
 }
 
@@ -37,4 +47,195 @@ a#hoverlink:hover {
 
 circle {
   fill: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+}
+
+.navitem {
+  align-items: center;
+  justify-content: center;
+}
+
+@media (pointer: none), (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+}
+
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+header li#topbarlinks {
+  transform: translateY(-50%);
+}
+
+header li.activeButton {
+  background-color: #212121;
+  border-radius: 20px;
+  border-color: #212121;
+  border: 40px 15px;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 50px;
+  box-shadow: 0 1px 8px rgb(26, 56, 95);
+  position: sticky;
+}
+
+#title {
+  margin-right: auto;
+  font-size: 1.5em;
+}
+
+header a {
+  text-decoration: none;
+  color: rgb(203, 200, 200);
+  transition: all 0.3s ease 0s;
+}
+
+header a:hover {
+  color: #b2dfdb;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  height: 90%;
+  margin-top: auto;
+  grid-template-areas:
+    "txt1 txt1 txt1 . ."
+    ". txt2 txt2 txt2 ."
+    ". . txt3 txt3 txt3";
+  grid-template-columns: repeat(1fr, 5);
+  grid-template-rows: repeat(1fr, 3);
+}
+
+.maintext {
+  font-size: 6em;
+  justify-self: center;
+  text-decoration: underline;
+  align-self: center;
+}
+
+.maintext.one {
+  grid-area: txt1;
+}
+
+.maintext.two {
+  grid-area: txt2;
+}
+
+.maintext.three {
+  grid-area: txt3;
+}
+
+.contactButton:link,
+.contactButton:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contactButton:hover,
+.contactButton:active {
+  background-color: #b2dfdb;
+  color: black;
+  border: 2px solid #b2dfdb;
+}
+
+.funnybgcontainer {
+  height: 100vh;
+  width: 100%;
+
+  background-attachment: fixed;
+
+  background-image: url("imgs/Slumk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  opacity: 0.8;
+}
+
+.bgtextcontainer {
+  /* position: absolute;
+  top: 10%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 40%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 150px;
+  opacity: 0;
+  text-align: center; */
+  width: 60%;
+  height: 89%;
+  object-fit: cover;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0;
+  top: 140px;
+  bottom: 20%;
+  text-align: center;
+  opacity: 0;
+}
+
+.bgtextcontainer {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.bgtextcontainer::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+/* .bgtextcontainer p {
+  background-color: white;
+  color: black;
+} */
+
+
+
+#backgroundVid {
+  width: 100vw;
+  height: 89%;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 11%;
+  bottom: 0;
+  z-index: -1;
+}
+
+.innovationInfo {
+  width: 40%;
+  height: 89%;
+  object-fit: cover;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0;
+  top: 20%;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
 }
