@@ -25,29 +25,16 @@ function onMouseHoverOut() {
 
 // cool scroll down text appear animation
 
-gsap.registerPlugin(ScrollTrigger);
 
 const $bgcontainer = document.querySelector(".funnybgcontainer"); 
 const $textcontainer = document.querySelector(".bgtextcontainer"); 
 
 gsap.to($bgcontainer, {
-  scrollTrigger: {
-    trigger: "header.infraheader",
-    start: "top top",
-    end: "bottom top",
-    scrub: true,
-    markers: true,
-  },
   opacity: 0.4,
+  delay: 2
 })
 
 gsap.to($textcontainer, {
-  scrollTrigger: {
-    trigger: "header.infraheader",
-    start: "top top",
-    end: "bottom top",
-    scrub: true,
-    markers: true,
-  },
   opacity: 1,
+  delay: 2
 })
